@@ -12,7 +12,6 @@ const titleStyles = {
 
 const Home = () => {
   const [cart, setCart] = useState([]);
-  console.log(cart);
   return (
     <div>
       <h1 style={titleStyles}>Lista de pizzas</h1>
