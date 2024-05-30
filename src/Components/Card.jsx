@@ -5,13 +5,13 @@ import { useState } from "react";
 // console.log(CardStyles);
 
 const Card = ({ item, setCart }) => {
-  const { img, tipo, precio } = item;
+  const { image, title, pricePerServing } = item;
 
   return (
     <div className={CardStyles.cardContainer}>
-      <img src={img} alt="" className={CardStyles.cardImg} />
-      <h4>{tipo}</h4>
-      <h4>{precio}</h4>
+      <img src={image} alt="" className={CardStyles.cardImg} />
+      <h4>{title}</h4>
+      <h4>${pricePerServing}</h4>
       <Counter />
       <button onClick={() => setCart((prevState) => [...prevState, item])}>
         🛒

@@ -34,7 +34,7 @@ const Form = () => {
       setError(true);
     }
   };
-  console.log(cliente);
+
   return (
     <>
       {/* Operador ternario
