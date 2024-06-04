@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Form from "./Components/Form";
-import Home from "./Components/Home";
+import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
-import ExampleFetch from "./Components/ExampleFetch";
-import AsyncAwait from "./Components/AsyncAwait";
+import Contact from "./Pages/Contact";
+import Cart from "./Pages/Cart";
+import { routes } from "./utils/routes";
+import Detail from "./Pages/Detail";
 
 function App() {
   return (
     <>
-      {/* <ExampleFetch />
-      <AsyncAwait /> */}
       <Navbar />
-      <Form />
-      <Home />
+      <Routes>
+        <Route path={routes.home} element={<Home />} />
+        <Route path={routes.contact} element={<Contact />} />
+        <Route path={routes.cart} element={<Cart />} />
+        <Route path={routes.detail} element={<Detail />} />
+        <Route path="*" element={<h1>Error 404 - Page not found</h1>} />
+      </Routes>
     </>
   );
 }
