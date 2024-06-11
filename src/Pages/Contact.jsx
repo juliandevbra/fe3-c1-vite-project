@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../Components/Button";
 
 const Contact = ({ handleClick }) => {
   const [mensaje, setMensaje] = useState("");
@@ -12,7 +13,7 @@ const Contact = ({ handleClick }) => {
         value={mensaje}
         onChange={(e) => setMensaje(e.target.value)}
       />
-      <button onClick={handleClick}>Enviar</button>
+      <Button onClick={handleClick}>Enviar</Button>
     </div>
   );
 };

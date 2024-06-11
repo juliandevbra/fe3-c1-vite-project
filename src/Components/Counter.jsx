@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);
@@ -13,9 +14,11 @@ const Counter = () => {
   };
   return (
     <div className="counter">
-      <button onClick={restar}>-</button>
+      {/* <button onClick={restar}>-</button> */}
+      <Button onClick={restar}>-</Button>
       <h3>{counter}</h3>
-      <button onClick={sumar}>+</button>
+      {/* <button onClick={sumar}>+</button> */}
+      <Button onClick={sumar}>+</Button>
     </div>
   );
 };

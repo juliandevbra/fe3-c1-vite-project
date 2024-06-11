@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Envio from "./Envio";
+import Button from "./Button";
 
 const Form = () => {
   // Podemos hacer un estado para cada input :/
@@ -54,7 +55,7 @@ const Form = () => {
             value={cliente.direccion}
             onChange={handleDireccion}
           />
-          <button>Enviar</button>
+          <Button>Enviar</Button>
         </form>
       )}
       {/* Operador ternario simplificado

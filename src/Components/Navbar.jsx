@@ -1,15 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
 import "../Styles/Navbar.css";
 import { routes } from "../utils/routes";
+import Button from "./Button";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
   return (
     <div className="navbar">
-      <button onClick={() => navigate(-1)}>
+      <Button onClick={() => navigate(-1)}>
         <h4>⬅Volver</h4>
-      </button>
+      </Button>
       <Link to={routes.home}>
         <h4>Home</h4>
       </Link>

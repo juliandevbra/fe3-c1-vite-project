@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // console.log(CardStyles);
 
-const Card = ({ item, setCart }) => {
+const Card = ({ item, children }) => {
   const { image, title, pricePerServing } = item;
 
   return (
@@ -16,9 +16,7 @@ const Card = ({ item, setCart }) => {
       </Link>
       <h4>${pricePerServing}</h4>
       <Counter />
-      <button onClick={() => setCart((prevState) => [...prevState, item])}>
-        🛒
-      </button>
+      {children}
     </div>
   );
 };
