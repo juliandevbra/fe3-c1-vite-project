@@ -11,15 +11,15 @@ const titleStyles = {
 };
 
 const Home = () => {
-  const { recipes, setCart } = useRecipeStates();
+  const { state, dispatch } = useRecipeStates();
   return (
     <div>
       <h1 style={titleStyles}>Lista de pizzas</h1>
       <div className="list-container">
-        {recipes.map((recipe) => (
+        {state.recipes.map((recipe) => (
           <Card item={recipe} key={recipe.id}>
             <Button
-              onClick={() => setCart((prevState) => [...prevState, recipe])}
+              onClick={() => dispatch({ type: "ADD_CART", payload: recipe })} //(prevState) => [...prevState, recipe]
             >
               🛒
             </Button>

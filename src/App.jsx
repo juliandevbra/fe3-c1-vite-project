@@ -6,15 +6,12 @@ import Contact from "./Pages/Contact";
 import Cart from "./Pages/Cart";
 import { routes } from "./utils/routes";
 import Detail from "./Pages/Detail";
-import ParentComponent from "./Clase 13/ParentComponent";
-import LoboEstepario from "./Clase 13/LoboEstepario";
+import Contador from "./Components/Contador";
 
 function App() {
   return (
     <>
-      {/* <ParentComponent />
-      <LoboEstepario /> */}
-
+      {/* <Contador /> */}
       <Navbar />
       <Routes>
         <Route path={routes.home} element={<Home />} />
